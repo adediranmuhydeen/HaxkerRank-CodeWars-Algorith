@@ -74,3 +74,8 @@ Console.WriteLine(CodeWars.DigitalRoot(49));
 int[] myArr = { 0, 0, 0, 0, 0 };
 
 Console.WriteLine(CodeWars.FindEvenIndex(myArr));
+
+string[] temp = {"key"}
+string myName = "Muhydeen";
+
+
