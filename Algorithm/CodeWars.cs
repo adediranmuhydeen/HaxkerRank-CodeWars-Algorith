@@ -18,6 +18,11 @@
             return true;
         }
 
+        public static bool CheckAnagram2(string first, string second)
+        {
+            return first.ToList<char>().Sum(a => (int)a) == second.ToList<char>().Sum(a => (int)a);
+        }
+
         public static int DigitalRoot(long n)
         {
             int result = 0;
@@ -38,7 +43,6 @@
         /// <returns></returns>
         public static int FindEvenIndex(int[] arr)
         {
-
             int result = -1;
             
             for (int i = 0; i < arr.Length; i++)
@@ -47,20 +51,23 @@
                 int rightIndex = arr.Length - 1;
                 int right = 0;
                 int left = 0;
-                while (leftIndex < i)
+                if (i >= 0)
                 {
-                    left += arr[leftIndex];                    
-                    leftIndex++;
-                }
-                while (rightIndex > i)
-                {
-                    right += arr[rightIndex];
-                    rightIndex--;
-                }
-                if (left == right)
-                {
-                    return i;
-                }
+                    while (leftIndex < i)
+                    {
+                        left += arr[leftIndex];
+                        leftIndex++;
+                    }
+                    while (rightIndex > i)
+                    {
+                        right += arr[rightIndex];
+                        rightIndex--;
+                    }
+                    if (left == right)
+                    {
+                        return i;
+                    }
+                }                
             }
             return result;
         }
