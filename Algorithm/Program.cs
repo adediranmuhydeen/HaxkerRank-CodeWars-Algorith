@@ -96,13 +96,21 @@
 
 //Console.WriteLine(EnumToStrigConverter.GetDescription<TestEnum>(TestEnum.EveryDay));
 
+//using Algorithm;
+
+//using Algorithm;
+
+//List<int> myList =new List<int> { 4, 2 , 5, 10, 23, 1, 3 };
+
+//Console.WriteLine("-------bubble sort ------------");
+//var response = Code.BubbleSort(myList);
+//foreach (int item in response)
+//{
+//    Console.WriteLine(item);
+//}
+
+//Console.WriteLine( "My name" + $"{null}");
+
 using Algorithm;
 
-List<int> myList =new List<int> { 4, 2 , 5, 10, 23, 1, 3 };
-
-Console.WriteLine("-------bubble sort ------------");
-var response = Code.BubbleSort(myList);
-foreach (int item in response)
-{
-    Console.WriteLine(item);
-}
+Console.WriteLine(CodeWars.ChangeWithLeastNumberOfCoins(100));

@@ -71,5 +71,36 @@
             }
             return result;
         }
+
+
+        /// <summary>
+        /// Given an amount of money, write a function that returns the smallest amount of coins that can be used as change
+        /// e.g 21 should return 3 but mot 5.
+        /// </summary>
+        /// <param name="amount"></param>
+        /// <returns></returns>
+        public static int ChangeWithLeastNumberOfCoins(int amount)
+        {
+            List<int> coins = new List<int>{25, 10, 5, 1 };
+            int result = 0;
+            foreach (int coin in coins)
+            {
+                if(amount%coin != 0)
+                {
+                    result += amount / coin;
+                    amount %= coin;
+                }
+                else if(amount == 1)
+                {
+                    result += 1;
+                    return result;
+                }
+                else
+                {
+                    return amount / coin;
+                }
+            }
+            return result;
+        }
     }
 }
